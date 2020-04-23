@@ -54,10 +54,12 @@ $(document).ready(function(){
 
                   //
                   var context={
+                    poster: generaPoster(listaFinale.poster_path),
                     title: listaFinale.title,
                     subtitle: listaFinale.original_title,
                     language: flagGenerator(listaFinale.original_language),
-                    voto : votoStelle
+                    voto : votoStelle,
+
                   };
 
 
@@ -74,6 +76,7 @@ $(document).ready(function(){
 
               // chiamata serie tv
   $.ajax({
+
             url:"https://api.themoviedb.org/3/search/tv",
             method: "GET",
             dataType: "json",
@@ -107,10 +110,12 @@ $(document).ready(function(){
 
 
                 var contextTv={
+                  poster: generaPoster(elencoSerie.poster_path),
                   title: elencoSerie.name,
                   subtitle: elencoSerie.original_name,
                   language: flagGenerator(elencoSerie.original_language),
-                  voto: votoStelleSerie
+                  voto: votoStelleSerie,
+
                 };
 
                 var finalResult= template(contextTv);
@@ -140,6 +145,15 @@ $(document).ready(function(){
 
           }
 
+          // funzione genera poster milestone 3
+
+          function generaPoster(poster){
+
+            var immagineFinale = "<img src='https://image.tmdb.org/t/p/w154" + poster + "'" + "alt='immagine non disponibile'>" ;
+            console.log(immagineFinale);
+            return immagineFinale;
+
+          }
 
 
 
