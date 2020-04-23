@@ -29,9 +29,9 @@ $(document).ready(function(){
                 var risultato= data.results;
                 console.log(risultato)
                 // ciclo risultati
-                for(var i = 0; i < risultato.length; i++){
+                for(var a = 0; i < risultato.length; a++){
 
-                  var listaFinale= risultato [i];
+                  var listaFinale= risultato [a];
 
                   // milestone 2
 
@@ -90,8 +90,8 @@ $(document).ready(function(){
               var risultatoSerie= data.results;
               console.log(risultatoSerie)
               // ciclo risultati
-              for(var i = 0; i < risultatoSerie.length; i++){
-                var elencoSerie= risultatoSerie[i];
+              for(var a = 0; a < risultatoSerie.length; a++){
+                var elencoSerie= risultatoSerie[a];
 
                 //  milestone 2 stelle
 
@@ -133,7 +133,7 @@ $(document).ready(function(){
             var imgGenerata;
 
             if(imgs.includes(codice)){
-              imgGenerata = '<img src"img/' + codice + '.png" alt="immagine" />';
+              imgGenerata = '<img src="img/' + codice + '.png" alt="immagine" class="flags" >';
               return imgGenerata;
             }
             return codice;
