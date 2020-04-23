@@ -56,7 +56,7 @@ $(document).ready(function(){
                   var context={
                     title: listaFinale.title,
                     subtitle: listaFinale.original_title,
-                    language: listaFinale.original_language,
+                    language: flagGenerator(listaFinale.original_language),
                     voto : votoStelle
                   };
 
@@ -92,6 +92,7 @@ $(document).ready(function(){
               // ciclo risultati
               for(var i = 0; i < risultatoSerie.length; i++){
                 var elencoSerie= risultatoSerie[i];
+
                 //  milestone 2 stelle
 
                 var votoSerieHtml = Math.ceil((elencoSerie.vote_average)/2);
@@ -106,9 +107,9 @@ $(document).ready(function(){
 
 
                 var contextTv={
-                  title: elencoSerie.original_name,
-                  subtitle: elencoSerie.name,
-                  language: elencoSerie.original_language,
+                  title: elencoSerie.name,
+                  subtitle: elencoSerie.original_name,
+                  language: flagGenerator(elencoSerie.original_language),
                   voto: votoStelleSerie
                 };
 
@@ -126,6 +127,18 @@ $(document).ready(function(){
 
           });
 
+          // funzione BANDIERE
+          function flagGenerator(codice){
+            var imgs= ["it","en"];
+            var imgGenerata;
+
+            if(imgs.includes(codice)){
+              imgGenerata = '<img src"img/' + codice + '.png" alt="immagine" />';
+              return imgGenerata;
+            }
+            return codice;
+
+          }
 
 
 
