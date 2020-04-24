@@ -149,14 +149,14 @@ $(document).ready(function(){
 
           function generaPoster(poster){
 
-            var immagineFinale = "<img src='https://image.tmdb.org/t/p/w154" + poster + "'" + "alt='immagine non disponibile'>" ;
+            var immagineFinale = "<img src='https://image.tmdb.org/t/p/w342" + poster + "'" + "alt='immagine non disponibile'>" ;
             console.log(immagineFinale);
             return immagineFinale;
 
           }
 
 
-
+          
 
 
 

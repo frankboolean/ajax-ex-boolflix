@@ -11,25 +11,40 @@
   <body>
     <div class="nav">
       <h1>Boolfix<i class="fas fa-star"></i></h1>
-      <input type="text" name="" value="">
-      <button type="button" name="button">Click</button>
+      <div class="right">
+        <input type="text" name="" value="">
+        <button type="button" name="button">Click</button>
+      </div>
+
     </div>
     <div class="container">
     </div>
 
 
       <script id="entry-template" type="text/x-handlebars-template">
-          <div class="film">
-              
-              <h3>{{title}}</h3>
-              <p>{{{poster}}}</p>
-              <h4>{{subtitle}}</h4>
-              <h5>{{{language}}}</h5>
-              <h6>{{{voto}}}</h6>
+
+
+        <div class="box2">
 
 
 
-          </div>
+        <div class="copertina">
+          {{{poster}}}
+
+        </div>
+
+
+
+        <div class="scritte">
+          <ul>
+            <li><h1>{{title}}</h1></li>
+            <li>{{subtitle}}</li>
+            <li>{{{language}}}</li>
+            <li>{{{voto}}}</li>
+
+          </ul>
+        </div>
+      </div>
 
 
 
